@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :registrations, only: [:create]
   post '/registrations', to: 'registrations#create'
   get '/registrations', to: 'registrations#index'
+  delete '/logout', to: 'sessions#logout'
+  get '/logged_in', to: 'sessions#logged_in'
+  post '/login', to: 'sessions#login'
+
 
 
 
