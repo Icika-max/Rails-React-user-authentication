@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resources :sessions, only: [:create]
+  resources :registrations, only: [:create]
+  post '/registrations', to: 'registrations#create'
+
+
   root to: "static#home"
   # root "articles#index"
 
