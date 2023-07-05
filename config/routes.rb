@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
   post '/registrations', to: 'registrations#create'
+  get '/registrations', to: 'registrations#index'
+
 
 
   root to: "static#home"
